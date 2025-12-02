@@ -1,0 +1,5 @@
+#!/bin/bash
+
+search="$@"
+url="https://text.pollinations.ai/$(python3 -c "import urllib.parse; print(urllib.parse.quote('$search'))")"
+echo "$(curl -s "$url")"
